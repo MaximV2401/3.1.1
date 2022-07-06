@@ -14,7 +14,7 @@ import java.util.List;
 public class UserService {
 
 
-    final UserRepository userRepository;
+    final private UserRepository userRepository;
 
     @Autowired
     public UserService(UserRepository userRepository) {
@@ -27,7 +27,7 @@ public class UserService {
     }
 
 
-    public void add(User user) {
+    public void addUser(User user) {
         userRepository.save(user);
     }
 
@@ -40,12 +40,12 @@ public class UserService {
 
 
 
-    public void delete(long id) {
+    public void deleteUser(long id) {
         userRepository.deleteById(id);
     }
 
 
-    public void update(User user) {
+    public void updateUser(User user) {
         userRepository.save(user);
     }
 }
